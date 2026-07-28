@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Represents a golf club member.
@@ -35,6 +36,8 @@ public class Member {
     @Column(name = "membership_type")
     private String membershipType;
 
+
+    @JsonIgnore
     @ManyToMany(mappedBy = "participatingMembers")
     private Set<Tournament> tournaments = new HashSet<>();
 
