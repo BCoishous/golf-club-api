@@ -34,8 +34,6 @@ The API will be available at http://localhost:8080
 - GET /api/tournaments/search/location?location= — search by location
 - POST /api/tournaments/{tournamentId}/members/{memberId} — register a member to a tournament
 
----
-
 ## AWS RDS
 
 The API connects to a PostgreSQL instance running on AWS RDS.
